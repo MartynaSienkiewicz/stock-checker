@@ -16,6 +16,10 @@ Use your browser's developer tools (e.g. right-click on element > Inspect) to lo
 - The text or element indicating stock status (e.g. "Out of stock").
 - Update the CSS_SELECTOR values in the script with these specific elements.
 
+I would suggest running this script on a server for continuous execution, AWS have a free usage tier that would allow this script to be run for days to weeks without any cost (if you have not used up the free tier from pervious projects). An EC2 instance can be used – there are many tutorials on the web for how to set this up. Keep in mind you will need to install Chrome, ChromeDriver and Selenium on the instance. Another thing to keep in mind is that the webpage may load differently on the instance, and require you to update your CSS Selectors based on what the instance sees.
+
+With the above, you should be set up to implement the program.
+
 Happy shopping!
 
 
