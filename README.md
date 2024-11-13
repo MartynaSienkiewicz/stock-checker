@@ -1,6 +1,6 @@
 # stock-checker
 
-Watching an item online but now it's out of stock? This python program can be used to scrape the webpage of the item you want to buy, check for stock availability, and send you a telegram push notification when the item goes back in stock (say if someone makes a return, or more stock becomes available – you'll be the first to know!). 
+Watching an item online but now it's out of stock? This Python program can be used to scrape the webpage of the item you want to buy, check for stock availability, and send you a telegram push notification when the item goes back in stock (say if someone makes a return, or more stock becomes available – you'll be the first to know!). 
 
 How it works:
 This Python script automates the process of checking the stock availability of a specific item on a webpage (this part requires you to know some html/CSS. You need to know which element youre looking for, for the item you're trying to buy). It uses Selenium to simulate browser interactions, identifies stock status based on specific elements on the webpage, and sends a Telegram notification if the item is in stock. The code and comments should be fairly self explanatory, the part that requires changing for the item you want to buy is the 'check_stock():' function. The code is currently set up to click a specific item size button, look for an out of stock message, and use that to either load the page and check again (after some given time interval that you can set) if the item is out of stock, or send a Telegram notification if the item is in stock.
