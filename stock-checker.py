@@ -68,11 +68,11 @@ def check_stock():
 
             # Check if the text contains "out of stock"
             if "out of stock" in stock_status.text.lower():
-                logging.info(f"Checked at {time.strftime('%Y-%m-%d %H:%M:%S')}: Size 6 is out of stock")
+                logging.info(f"Checked at {time.strftime('%Y-%m-%d %H:%M:%S')}: Size <item size> is out of stock")
                 return False
             else:
-                logging.info(f"Checked at {time.strftime('%Y-%m-%d %H:%M:%S')}: Size 6 is IN STOCK")
-                send_telegram_notification(f"Size 6 jeans IN STOCK {URL}")
+                logging.info(f"Checked at {time.strftime('%Y-%m-%d %H:%M:%S')}: Size <item size> is IN STOCK")
+                send_telegram_notification(f"Size <item size> IN STOCK {URL}")
                 return True
         except Exception as e:
             logging.error(f"Error while checking stock status: {e}")
